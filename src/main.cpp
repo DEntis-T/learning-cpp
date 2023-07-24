@@ -14,9 +14,9 @@
 int main()
 {
 	using namespace utils;
-	str input;
+	
 	echo("Test");
 	echorectangle(4,4,'i');
-	std::cout << strcomp("lj3", "hi");
+	std::cout << strcomp("ee", "hi");
 	return 0;
 }

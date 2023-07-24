@@ -44,7 +44,7 @@ namespace utils
 		{
 			return false;
 		}
-		for(int i; i < str1.length(); i++)
+		for(int i = 0; i < str1.length(); i++)
 		{
 			if(str1.at(i) != str2.at(i))
 			{
