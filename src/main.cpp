@@ -10,9 +10,13 @@
 #include <cstring>
 
 #include "utils.cpp"
+#include "class.hpp"
 
 int main()
 {
+
+	main_hook();
+
 	str_t cmd;
 	using namespace sampctl;
 
