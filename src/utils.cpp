@@ -24,14 +24,15 @@ namespace utils
 		return 0;
 	}
 	///////////////////////////////////////////////////
-	int echorectangle(int rows, int columns, char character)
+	int echorectangle(int rows, int columns, char character, bool spaces)
 	{
 		using namespace std;
 		for(int i = 0; i < rows; i++)
 		{
 			for(int j = 0; j < columns; j++)
 			{
-				cout << character << space;
+				if(!spaces) cout << character;
+				else if(spaces) cout << character << space;
 			}
 			cout << endl;
 		}
