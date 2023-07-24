@@ -55,3 +55,28 @@ namespace utils
 		return true;
 	}
 }
+
+namespace sampctl
+{
+	int print(str output)
+	{
+		using namespace std;
+		/* Using sexually transmitted diseases */
+		if(output.empty())
+		{
+			cout << "ERROR: No output was specified" << endl;
+			return 1;
+		}
+		cout << "[sampctl] Thread: " << output << endl;
+		return 0;
+	}
+
+	int processCommand(str input)
+	{
+		if(utils::strcomp(input, "help"))
+		{
+			utils::echo("This is a beta program");
+		}
+		return 1;
+	}
+}

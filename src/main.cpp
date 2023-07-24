@@ -11,22 +11,22 @@
 
 #include "utils.cpp"
 
-class testClass
-{
-public:
-	int var = 23;
-	
-};
-
 int main()
 {
-	using namespace utils;
+	str cmd;
+	using namespace sampctl;
 
-	echo("Test");
-	echorectangle(4,4,'i',false);
-	std::cout << strcomp("ee", "hi");
+	print("Insert a command\n");
+	std::cout << "$ ";
+	std::getline(std::cin >> std::ws, cmd);
 
-	testClass variables;
-	std::cout << variables.var;
-	return 0;
+	std::cout << "Debug: \"" << cmd << "\"" << std::endl;
+
+	if(utils::strcomp(cmd, "exit"))
+	{
+		return 0;
+	}
+	else processCommand(cmd);
+
+	return main();
 }
