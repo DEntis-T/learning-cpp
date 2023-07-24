@@ -13,7 +13,7 @@
 
 int main()
 {
-	str cmd;
+	str_t cmd;
 	using namespace sampctl;
 
 	print("Insert a command\n");

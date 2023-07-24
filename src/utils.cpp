@@ -5,13 +5,18 @@
 *
 */
 
-typedef std::string str;
+typedef std::string str_t;
 
 namespace utils
 {
 	char space = ' ';
 	///////////////////////////////////////////////////
-	int echo(str output)
+	template<typename data, typename data2> auto max(data x, data2 y)
+	{
+		return x > y ? x : y;
+	}
+	///////////////////////////////////////////////////
+	int echo(str_t output)
 	{
 		using namespace std;
 		/* Using sexually transmitted diseases */
@@ -39,7 +44,7 @@ namespace utils
 		return 0;
 	}
 	////////////////////////////////////////
-	bool strcomp(str str1, str str2)
+	bool strcomp(str_t str1, str_t str2)
 	{
 		if(str1.length() != str2.length())
 		{
@@ -58,7 +63,7 @@ namespace utils
 
 namespace sampctl
 {
-	int print(str output)
+	int print(str_t output)
 	{
 		using namespace std;
 		/* Using sexually transmitted diseases */
@@ -71,11 +76,20 @@ namespace sampctl
 		return 0;
 	}
 
-	int processCommand(str input)
+	int processCommand(str_t input)
 	{
+		using namespace std;
+
 		if(utils::strcomp(input, "help"))
 		{
 			utils::echo("This is a beta program");
+		}
+		else if(utils::strcomp(input, "max"))
+		{
+			utils::echo("Insert 2 numbers!");
+			int input1, input2;
+			cin >> input1 >> input2;
+			cout << "Bigger element is: " << utils::max(input1, input2) << endl;
 		}
 		return 1;
 	}
