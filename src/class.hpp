@@ -17,36 +17,21 @@ public:
 		this->alive = alive;
 		this->age = age;
 	}
-};
 
-// Inheritance
-class DEntisT : public Human
-{
-public:
 	void code(str_t lang)
 	{
 		using namespace std;
 
-		cout << "DEntisT is coding in " << lang << endl;
+		cout << "Human is coding in " << lang << endl;
 	}
 };
-
-class Y_Less : public Human
-{
-public:
-	void code_too(str_t lang)
-	{
-		using namespace std;
-
-		cout << "Y_Less is coding in " << lang << endl;
-	}
-};
-
 
 int main_hook()
 {
-	DEntisT human(true, 17);
+	Human human(true, 17);
 
 	human.code("C++");
+
+	std::cout << (human.alive ? "true" : "false") << " " << human.age << std::endl;
 	return 0;
 }

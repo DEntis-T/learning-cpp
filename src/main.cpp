@@ -12,9 +12,11 @@
 #include "utils.cpp"
 #include "class.hpp"
 
+
 int main()
 {
-
+	float var = 24.0;
+	std::cout << var << std::endl;
 	main_hook();
 
 	str_t cmd;
